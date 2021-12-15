@@ -36,7 +36,7 @@ while running:
         if pygame.mouse.get_focused():
             if event.type == pygame.MOUSEMOTION:
                 m_c = event.pos
-    if m_c[0]:
+    if m_c[0] and pygame.mouse.get_focused():
         screen.blit(img, m_c)
     pygame.display.flip()
 pygame.quit()
